@@ -1,0 +1,22 @@
+--- cmake_original.txt	2021-07-24 16:01:06.176363400 +0300
++++ CMakeLists.txt	2021-07-22 17:23:43.000000000 +0300
+@@ -80,6 +80,7 @@
+ # Plugins
+ option(BUILD_SUPPORTED "Build the supported plugins (reveal, probe, etc.)." ON)
+ if(BUILD_SUPPORTED)
++    dfhack_plugin(dojobnow dojobnow.cpp)
+     dfhack_plugin(3dveins 3dveins.cpp)
+     dfhack_plugin(add-spatter add-spatter.cpp)
+     # dfhack_plugin(advtools advtools.cpp)
+@@ -184,6 +185,11 @@
+ if(BUILD_SKELETON)
+     add_subdirectory(skeleton)
+ endif()
++OPTION(BUILD_DFPLEX "Build the dwarfplex plugin" ON)
++if(BUILD_DFPLEX)
++    add_subdirectory(dfplex/server)
++endif()
++
+ 
+ if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.custom.txt")
+     file(WRITE "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.custom.txt" "# You can add custom plugins here to avoid touching plugins/CMakeLists.txt,

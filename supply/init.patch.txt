@@ -1,0 +1,27 @@
+--- patch-settings/init.txt	2021-01-29 07:24:52.000000000 +0300
++++ patch-settings/init_new.txt	2021-07-22 17:30:15.000000000 +0300
+@@ -8,7 +8,7 @@
+ 
+ Change this to turn sound off.
+ 
+-[SOUND:YES]
++[SOUND:NO]
+ 
+ The sound volume runs from 0 (off) to 255 (full).  You can set the volume from the ESC options menu as well.
+ 
+@@ -64,7 +64,7 @@
+ 
+ Linux/OS X users may also use PRINT_MODE:TEXT for primitive ncurses output.
+ 
+-[PRINT_MODE:2D]
++[PRINT_MODE:TEXT]
+ 	Mode examples:
+ 	 PRINT_MODE:2D
+ 	 PRINT_MODE:TEXT
+@@ -147,4 +147,4 @@
+ 
+ Change this to NO if you want to leave save uncompressed (you might want to do this if you are experience save corruption).
+ 
+-[COMPRESSED_SAVES:YES]
+\ No newline at end of file
++[COMPRESSED_SAVES:YES]
