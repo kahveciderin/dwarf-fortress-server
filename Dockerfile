@@ -14,11 +14,11 @@ RUN cd /df/dfhack/plugins && git clone https://github.com/white-rabbit-dfplex/df
 
 RUN cd /df/dfhack/plugins/dfplex && git checkout d9ff3f51537aa6d7d9c33bea42813559c91ea5d3
 
-RUN cd /df/dfhack/plugins && wget https://gist.githubusercontent.com/kahveciderin/6c523e526bc8d193a9d51c4d90b2c2a2/raw/d37ab4968b4a5ea02eb5c6f67948529ad41b484f/CMakeList.txt.patch.txt
+RUN cd /df/dfhack/plugins && wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/supply/CMakeLists.txt.patch.txt
 
-RUN cd /df/dfhack/plugins && patch CMakeLists.txt < CMakeList.txt.patch.txt && rm CMakeList.txt.patch.txt
+RUN cd /df/dfhack/plugins && patch CMakeLists.txt < CMakeLists.txt.patch.txt && rm CMakeLists.txt.patch.txt
 
-RUN cd /df/dfhack/plugins && wget https://gist.githubusercontent.com/kahveciderin/0193b8c97d508a592a844f8808c6029c/raw/29c976ce70072df53e6e6310a5be22bb21011f01/dojobnow.cpp
+RUN cd /df/dfhack/plugins && wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/supply/dojobnow.cpp
 
 RUN wget http://www.bay12games.com/dwarves/df_47_05_linux.tar.bz2
 
@@ -30,7 +30,7 @@ RUN /bin/bash -c cd /df/dfhack/build && CXX=g++ cmake /df/dfhack -G Ninja -DCMAK
 
 RUN apt-get install -y dos2unix screen
 
-RUN cd /df/df_linux/data/init && wget https://gist.githubusercontent.com/kahveciderin/18944231b5df71a353d6980dec139bf5/raw/cc231e5c3b51ba2d6e1fa91838e142a70ca4751d/init.patch.txt && dos2unix init.txt && patch init.txt < init.patch.txt && rm init.patch.txt
+RUN cd /df/df_linux/data/init && wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/supply/init.patch.txt && dos2unix init.txt && patch init.txt < init.patch.txt && rm init.patch.txt
 
 RUN apt-get install libsdl1.2debian libsdl-image1.2 libsdl-ttf2.0-0 libgtk2.0-0 libopenal1 libsndfile1 libncursesw5 -y
 
