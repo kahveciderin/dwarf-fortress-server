@@ -28,7 +28,7 @@ RUN /bin/bash -c cd /df/dfhack/build && CXX=g++ cmake /df/dfhack -G Ninja -DCMAK
 
 RUN cd /df/df_linux/data/init && wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/supply/init.patch.txt && dos2unix init.txt && patch init.txt < init.patch.txt && rm init.patch.txt
 
-RUN echo "enable dfplex, buildingplan" > df_linux/dfhack.init
+RUN echo "enable dfplex buildingplan" > df_linux/dfhack.init
 
 RUN echo -ne "#!/bin/bash\ncd /df/df_linux;while true;do linux64 /df/df_linux/dfhack;done" > start.sh && chmod +x start.sh
 
