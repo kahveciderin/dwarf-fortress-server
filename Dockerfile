@@ -40,4 +40,6 @@ RUN echo "\n[AUTOSAVE:SEASONAL]" >> /df/df_linux/data/init/d_init.txt
 
 EXPOSE 1234
 
+EXPOSE 5000
+
 CMD ["/bin/bash", "/df/start.sh"]
