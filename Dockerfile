@@ -22,6 +22,8 @@ RUN cd /df/dfhack/plugins && wget https://raw.githubusercontent.com/kahveciderin
 
 RUN wget http://www.bay12games.com/dwarves/df_47_05_linux.tar.bz2
 
+RUN cd /df/dfhack/library && wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/supply/RemoteServer.cpp.patch.txt && patch RemoteServer.cpp < RemoteServer.cpp.patch.txt && rm RemoteServer.cpp.patch.txt
+
 RUN tar -xvf df_47_05_linux.tar.bz2 df_linux/
 
 RUN /bin/bash -c cd /df/dfhack/build && CXX=g++ cmake /df/dfhack -G Ninja -DCMAKE_BUILD_TYPE:string=Release -DCMAKE_INSTALL_PREFIX=/df/df_linux && ninja install -j$(nproc)
