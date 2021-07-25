@@ -11,7 +11,7 @@ docker run -d --restart always --privileged -p 8764:1234 -p 5000:5000 -v ~/dwarf
 cd ..
 rm -rf df_install/
 if [ -z "$failed" ]; then
-    echo "Server should be up and running on port 8765!"
+    echo "Server should be up and running on port 8764!"
 else
     rm -rf df_install/  
     echo "Encountered error, deleting all containers"
