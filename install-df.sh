@@ -7,7 +7,7 @@ mkdir df_install
 cd df_install
 wget https://raw.githubusercontent.com/kahveciderin/dwarf-fortress-server/master/Dockerfile
 docker build -t dfserver .
-docker run -d --restart always --privileged -p 8765:1234 -p 5000:5000 -v ~/dwarf_fortress/saves:/df/df_linux/data/save -it dfserver
+docker run -d --restart always --privileged -p 8764:1234 -p 5000:5000 -v ~/dwarf_fortress/saves:/df/df_linux/data/save -it dfserver
 cd ..
 rm -rf df_install/
 if [ -z "$failed" ]; then
