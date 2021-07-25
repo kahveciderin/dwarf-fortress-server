@@ -16,3 +16,4 @@ else
     echo "Encountered error, deleting created docker container"
     docker stop dfserver
     docker rm dfserver
+fi
