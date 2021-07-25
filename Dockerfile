@@ -38,9 +38,9 @@ RUN echo "\n[PRINT_MODE:TEXT]\n[INTRO:NO]\n[TRUETYPE:NO]\n[SOUND:NO]" >> /df/df_
 
 RUN echo "\n[AUTOSAVE:SEASONAL]" >> /df/df_linux/data/init/d_init.txt
 
-RUN mkdir /df/dfhack-config/
+RUN mkdir /df/df_linux/dfhack-config/
 
-RUN echo "{allow_remote:true,port:5000}" > /df/dfhack-config/remote-server.json
+RUN echo "{allow_remote:true,port:5000}" > /df/df_linux/dfhack-config/remote-server.json
 
 EXPOSE 1234
 
