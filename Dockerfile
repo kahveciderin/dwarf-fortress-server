@@ -30,13 +30,13 @@ RUN cd /df/df_linux/data/init && wget https://raw.githubusercontent.com/kahvecid
 
 RUN echo "enable dfplex buildingplan" > df_linux/dfhack.init
 
-RUN echo -ne "#!/bin/bash\ncd /df/df_linux;while true;do linux64 /df/df_linux/dfhack;done" > start.sh && chmod +x start.sh
+RUN echo "#!/bin/bash\ncd /df/df_linux;while true;do linux64 /df/df_linux/dfhack;done" > start.sh && chmod +x start.sh
 
-RUN echo -ne "\n[BIRTH_CITIZEN:A_D:D_D]\n[MOOD_BUILDING_CLAIMED:A_D:D_D]\n[ARTIFACT_BEGUN:A_D:D_D]" >> /df/df_linux/data/init/announcements.txt
+RUN echo "\n[BIRTH_CITIZEN:A_D:D_D]\n[MOOD_BUILDING_CLAIMED:A_D:D_D]\n[ARTIFACT_BEGUN:A_D:D_D]" >> /df/df_linux/data/init/announcements.txt
 
-RUN echo -ne "\n[PRINT_MODE:TEXT]\n[INTRO:NO]\n[TRUETYPE:NO]\n[SOUND:NO]" >> /df/df_linux/data/init/init.txt
+RUN echo "\n[PRINT_MODE:TEXT]\n[INTRO:NO]\n[TRUETYPE:NO]\n[SOUND:NO]" >> /df/df_linux/data/init/init.txt
 
-RUN echo -ne "\n[AUTOSAVE:SEASONAL]" >> /df/df_linux/data/init/d_init.txt
+RUN echo "\n[AUTOSAVE:SEASONAL]" >> /df/df_linux/data/init/d_init.txt
 
 EXPOSE 1234
 
