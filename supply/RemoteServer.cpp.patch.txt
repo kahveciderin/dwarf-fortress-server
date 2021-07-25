@@ -1,0 +1,11 @@
+--- RemoteServer.cpp	2021-07-10 04:21:36.000000000 +0300
++++ RemoteServerEdit.cpp	2021-07-25 11:03:38.418762832 +0300
+@@ -324,7 +324,7 @@
+         }
+         else
+         {
+-            if (((fn->flags & SF_ALLOW_REMOTE) != SF_ALLOW_REMOTE) && strcmp(socket->GetClientAddr(), "127.0.0.1") != 0)
++            if (false)
+             {
+                 stream.printerr("In call to %s: forbidden host: %s\n", fn->name, socket->GetClientAddr());
+             }
