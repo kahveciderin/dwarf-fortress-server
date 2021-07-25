@@ -14,7 +14,7 @@ if [ -z "$failed" ]; then
     echo "Server should be up and running on port 8765!"
 else
     rm -rf df_install/  
-    echo "Encountered error, deleting created docker container"
-    docker stop dfserver
-    docker rm dfserver
+    echo "Encountered error, deleting all containers"
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 fi
